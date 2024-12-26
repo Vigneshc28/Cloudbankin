@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* General Container */
+.app-container {
+  font-family: Arial, sans-serif;
+  background: #f9fbfc;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start;
+}
+
+/* Header Styling */
+.header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #e0e0e0;
+  width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #007bff;
   color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.header-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.user-info-container {
+  display: flex;
+  align-items: center;
+}
+
+.user-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.user-info {
+  font-size: 1rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+.expand-icon {
+  font-size: 1.2rem;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* Stepper Container */
+.stepper-container {
+  margin-top: 30px; /* Adjust this if necessary */
+  width: 100%;
+  padding: 0 20px;
+  max-width: 1000px; /* Optional: control the width of the stepper */
+}
+
+/* Stepper Circle Styling */
+.stepper-container .stepper-circle {
+  width: 60px; /* Increased size of the circle */
+  height: 60px; /* Increased size of the circle */
+  font-size: 18px; /* Smaller font size inside the circle */
+  line-height: 60px; /* Ensure the text is centered vertically */
+}
+
+/* Stepper Label Styling */
+.stepper-container .stepper-label {
+  font-size: 12px; /* Smaller font size for the step labels */
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Stepper Line Styling */
+.stepper-container .stepper-line {
+  height: 3px; /* Adjust the thickness of the line */
+  background-color: #007bff; /* Set line color */
+  margin-top: 15px;  /* Space between step circle and line */
+}
+
+/* Form Section */
+.form-section {
+  padding: 20px 40px;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Buttons */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .logo-container {
+    margin-bottom: 10px;
   }
+
+  .stepper-container {
+    padding: 0 10px;
+  }
+
+  .form-section {
+    padding: 20px 10px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Stepper Container */
+.stepper-container {
+  margin-top: 30px; /* Adjust this if necessary */
+  width: 100%;
+  padding: 0 20px;
+  max-width: 1000px; /* Optional: control the width of the stepper */
+}
+
+/* Form Section */
+.form-section {
+  padding: 20px 40px;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+/* Stepper Container */
+.stepper-container {
+  margin-top: 30px; /* Adjust this if necessary */
+  width: 100%;
+  padding: 0 20px;
+  max-width: 1000px; /* Optional: control the width of the stepper */
+}
+
+/* Form Section */
+.form-section {
+  padding: 20px 40px;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
 }
